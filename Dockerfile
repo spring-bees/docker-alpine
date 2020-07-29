@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.10
 
 MAINTAINER coolbeevip <coolbeevip@gmail.com>
 
@@ -12,5 +12,5 @@ ENV LANG='en_US.UTF-8' \
 
 RUN set -x && \
     apk update && \
-    apk add --no-cache bash tzdata openssh su-exec unzip libc6-compat libzmq ttf-dejavu curl shadow && \
+    apk add --no-cache bash tzdata openssh su-exec unzip libc6-compat libzmq ttf-dejavu curl shadow sshpass && \
 	cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
